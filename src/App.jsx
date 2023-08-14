@@ -30,7 +30,11 @@ function App() {
   return (
     <>
       <section className="jobs-center">
-        <ButtonContainer alljobs={tabs} buttonPressedItems={setCurrentItems} />
+        <ButtonContainer
+          alljobs={tabs}
+          buttonItem={currentItem}
+          buttonPressedItems={setCurrentItems}
+        />
         {isLoading && <div className="loading"></div>}
         {!isLoading && (
           <JobsInfo myJobInfos={tabs} currentJobsItems={currentItem} />
